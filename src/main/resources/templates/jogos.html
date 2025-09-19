@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Biblioteca de Jogos</title>
+</head>
+<body>
+    <h1>Biblioteca de Jogos</h1>
+
+    <form th:action="@{/jogos/pesquisar}" method="get">
+        <input type="text" name="termo" placeholder="Pesquisar...">
+        <select name="tipo">
+            <option value="titulo">Título</option>
+            <option value="autor">Autor</option>
+            <option value="genero">Gênero</option>
+        </select>
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    <br>
+
+    <a th:href="@{/jogos/novo}">Adicionar Novo Jogo</a>
+
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th><a th:href="@{/jogos(sortBy='titulo')}">Título</a></th>
+                <th><a th:href="@{/jogos(sortBy='autor')}">Autor</a></th>
+                <th><a th:href="@{/jogos(sortBy='anoPublicacao')}">Ano</a></th>
+                <th>Gênero</th>
+                <th>Finalizado</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="jogo : ${jogos}">
+                <td th:text="${jogo.titulo}"></td>
+                <td th:text="${jogo.autor}"></td>
+                <td th:text="${jogo.anoPublicacao}"></td>
+                <td th:text="${jogo.genero}"></td>
+                <td th:text="${jogo.finalizado ? 'Sim' : 'Não'}"></td>
+                <td>
+                    <a th:href="@{/jogos/editar/{id}(id=${jogo.id})}">Editar</a>
+                    <a th:href="@{/jogos/excluir/{id}(id=${jogo.id})}">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

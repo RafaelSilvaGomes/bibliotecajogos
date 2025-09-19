@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Jogo</title>
+</head>
+<body>
+    <h1>Formulário de Jogo</h1>
+
+    <form th:action="@{/jogos}" th:object="${jogo}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <div>
+            <label>Título:</label>
+            <input type="text" th:field="*{titulo}" />
+        </div>
+        <div>
+            <label>Autor:</label>
+            <input type="text" th:field="*{autor}" />
+        </div>
+        <div>
+            <label>Ano de Publicação:</label>
+            <input type="number" th:field="*{anoPublicacao}" />
+        </div>
+        <div>
+            <label>Gênero:</label>
+            <input type="text" th:field="*{genero}" />
+        </div>
+        <div>
+            <label>Finalizado:</label>
+            <input type="checkbox" th:field="*{finalizado}" />
+        </div>
+        <div>
+            <button type="submit">Salvar</button>
+        </div>
+    </form>
+</body>
+</html>
