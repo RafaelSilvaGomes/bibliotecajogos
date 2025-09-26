@@ -18,7 +18,9 @@ public class Jogo {
     private String autor;
     private Integer anoPublicacao;
     private String genero;
-    private String urlCapa; // Novo campo
+    private String urlCapa;
+    private int nota;
+    private String dificuldade;
 
     private boolean finalizado = false;
 
@@ -88,5 +90,21 @@ public class Jogo {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public int getNota() {
+        return nota;
+    }
+
+    public void setNota(int nota) {
+        this.nota = nota;
+    }
+
+    public String getDificuldade() {
+        return dificuldade;
+    }
+
+    public void setDificuldade(String dificuldade) {
+        this.dificuldade = dificuldade;
     }
 }

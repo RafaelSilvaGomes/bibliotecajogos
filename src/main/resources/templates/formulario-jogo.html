@@ -65,6 +65,23 @@
                 th:field="*{urlCapa}"
               />
             </div>
+            <div class="mb-3">
+              <label for="nota" class="form-label">Nota para o Jogo:</label>
+              <input
+                type="number"
+                id="nota"
+                class="form-control"
+                th:field="*{nota}"
+              />
+            </div>
+            <div class="mb-3">
+                <label for="dificuldade" class="form-label">Dificuldade:</label>
+                <select id="dificuldade" class="form-select" th:field="*{dificuldade}">
+                    <option value="Fácil">Fácil</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Difícil">Difícil</option>
+                </select>
+            </div>
             <div class="form-check mb-3">
               <input
                 type="checkbox"

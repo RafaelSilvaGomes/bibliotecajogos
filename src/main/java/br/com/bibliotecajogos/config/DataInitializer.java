@@ -50,6 +50,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo1.setCategoria(rpg);
             jogo1.setFinalizado(true);
             jogo1.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/thumb/0/06/TW3_Wild_Hunt.png/270px-TW3_Wild_Hunt.png");
+            jogo1.setNota(7);
+            jogo1.setDificuldade("Médio");
 
             Jogo jogo2 = new Jogo();
             jogo2.setTitulo("Red Dead Redemption 2");
@@ -59,6 +61,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo2.setCategoria(acao);
             jogo2.setFinalizado(true);
             jogo2.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/e/e7/Red_Dead_Redemption_2.png");
+            jogo2.setNota(9);
+            jogo2.setDificuldade("Difícil");
 
             Jogo jogo3 = new Jogo();
             jogo3.setTitulo("Age of Empires IV");
@@ -68,6 +72,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo3.setCategoria(estrategia);
             jogo3.setFinalizado(false);
             jogo3.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/4/43/Capa_do_jogo_Age_of_Empires_IV.jpg");
+            jogo3.setNota(8);
+            jogo3.setDificuldade("Difícil");
 
             Jogo jogo4 = new Jogo();
             jogo4.setTitulo("Baldur's Gate 3");
@@ -77,6 +83,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo4.setCategoria(rpg);
             jogo4.setFinalizado(false);
             jogo4.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/1/18/Baldur%27s_Gate_III_Larian_Studios_key_art.png");
+            jogo4.setNota(9);
+            jogo4.setDificuldade("Médio");
 
             Jogo jogo5 = new Jogo();
             jogo5.setTitulo("God of War Ragnarök");
@@ -86,6 +94,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo5.setCategoria(aventura);
             jogo5.setFinalizado(true);
             jogo5.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/a/a5/God_of_War_Ragnar%C3%B6k_capa.jpg");
+            jogo5.setNota(10);
+            jogo5.setDificuldade("Fácil");
 
             Jogo jogo6 = new Jogo();
             jogo6.setTitulo("Elden Ring");
@@ -95,6 +105,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo6.setCategoria(rpg);
             jogo6.setFinalizado(true);
             jogo6.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/0/0d/Elden_Ring_capa.jpg");
+            jogo6.setNota(10);
+            jogo6.setDificuldade("Difícil");
 
             Jogo jogo7 = new Jogo();
             jogo7.setTitulo("Cyberpunk 2077");
@@ -104,6 +116,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo7.setCategoria(rpg);
             jogo7.setFinalizado(true);
             jogo7.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/thumb/f/f7/Cyberpunk_2077_capa.png/270px-Cyberpunk_2077_capa.png");
+            jogo7.setNota(6);
+            jogo7.setDificuldade("Médio");
 
             Jogo jogo8 = new Jogo();
             jogo8.setTitulo("StarCraft II: Wings of Liberty");
@@ -113,6 +127,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo8.setCategoria(estrategia);
             jogo8.setFinalizado(true);
             jogo8.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/4/40/StarCraft_II_capa.jpg");
+            jogo8.setNota(9);
+            jogo8.setDificuldade("Difícil");
 
             Jogo jogo9 = new Jogo();
             jogo9.setTitulo("The Legend of Zelda: Tears of the Kingdom");
@@ -122,6 +138,8 @@ public class DataInitializer implements CommandLineRunner {
             jogo9.setCategoria(aventura);
             jogo9.setFinalizado(false);
             jogo9.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/2/25/Zelda_TotK_capa.jpg");
+            jogo9.setNota(5);
+            jogo9.setDificuldade("Médio");
 
             Jogo jogo10 = new Jogo();
             jogo10.setTitulo("GTA V");
@@ -131,7 +149,9 @@ public class DataInitializer implements CommandLineRunner {
             jogo10.setCategoria(acao);
             jogo10.setFinalizado(true);
             jogo10.setUrlCapa("https://upload.wikimedia.org/wikipedia/pt/8/80/Grand_Theft_Auto_V_capa.png");
-
+            jogo10.setNota(10);
+            jogo10.setDificuldade("Fácil");
+            
             jogoRepository.saveAll(Arrays.asList(jogo1, jogo2, jogo3, jogo4, jogo5, jogo6, jogo7, jogo8, jogo9, jogo10));
 
             System.out.println(">>> Banco de dados populado com sucesso!");
